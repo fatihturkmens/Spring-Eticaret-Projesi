@@ -21,14 +21,14 @@ public class CategoryServiceİmpl implements CategoryService {
 
     @Override
     public List<Category> getAllCategories() {
-     //   return categories;  NORMALDE BUYDU AMA ARTIK REPOSİTORY KULLANDIGIMIZ İÇİNS AŞAĞIDAKİ GİBİ
+     //   return categories;  
         return categoryRepository.findAll();
     }
 
     @Override
     public void creataCategory(Category category) {
         category.setCategoryID(categoryIDnext++);
-       // categories.add(category);   NORMALDE BUYDU AMA ARTIK REPOSİTORY KULLANDIGIMIZ İÇİNS AŞAĞIDAKİ GİBİ
+       // categories.add(category);   
         categoryRepository.save(category);
 
     }
